@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Event Timestamp Tracker</title>
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="/style.css"
+  >
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header-content">
+      <h1>Event Timestamp Tracker</h1>
+
+      <p>
+        Create and convert timestamps for your important events.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+
+      <h2>Create an Event</h2>
+
+      <p class="description">
+        Enter an event name and date to generate its Unix and UTC timestamps.
+      </p>
+
+      <form id="eventForm">
+
+        <div class="form-group">
+
+          <label for="eventName">
+            Event Name
+          </label>
+
+          <input
+            type="text"
+            id="eventName"
+            placeholder="Example: Project Presentation"
+            required
+          >
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="eventDate">
+            Event Date and Time
+          </label>
+
+          <input
+            type="datetime-local"
+            id="eventDate"
+            required
+          >
+
+        </div>
+
+        <button type="submit">
+          Create Event Timestamp
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <section
+      class="card result-card"
+      id="resultCard"
+      hidden
+    >
+
+      <h2>Event Timestamp</h2>
+
+      <div class="event-title">
+        <span>Event</span>
+        <strong id="resultEvent"></strong>
+      </div>
+
+      <div class="timestamp">
+
+        <div class="timestamp-item">
+
+          <span class="label">
+            Unix Timestamp
+          </span>
+
+          <code id="resultUnix"></code>
+
+        </div>
+
+        <div class="timestamp-item">
+
+          <span class="label">
+            UTC Date
+          </span>
+
+          <code id="resultUtc"></code>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="card">
+
+      <div class="section-heading">
+
+        <div>
+
+          <h2>Event History</h2>
+
+          <p class="description">
+            Your recently created event timestamps.
+          </p>
+
+        </div>
+
+        <button
+          id="clearEvents"
+          class="secondary-button"
+          type="button"
+        >
+          Clear History
+        </button>
+
+      </div>
+
+      <div id="eventList">
+
+        <p class="empty-message">
+          No events have been created yet.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="card api-card">
+
+      <h2>Timestamp API</h2>
+
+      <p>
+        This application also provides a timestamp API.
+      </p>
+
+      <div class="api-example">
+
+        <strong>Example:</strong>
+
+        <code>/api/2015-12-25</code>
+
+      </div>
+
+      <div class="api-example">
+
+        <strong>Response:</strong>
+
+        <code>
+          {"unix":1451001600000,"utc":"Fri, 25 Dec 2015 00:00:00 GMT"}
+        </code>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="/script.js"></script>
+
+</body>
+
+</html>

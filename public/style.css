@@ -1,0 +1,274 @@
+/****** Main Styling ******/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background-color: #fdfbd4;
+  line-height: 1.5;
+}
+
+/* Header */
+.header {
+  background-color: #866237;
+  color: white;
+  padding: 30px 10px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 34px;
+  color: white;
+}
+
+.header p {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+}
+
+/* Main container */
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: 35px auto;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  color: #000;
+  padding: 28px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  border: 2px solid #866237;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 23px;
+  color: #866237;
+}
+
+.description {
+  margin-top: 0;
+  color: #000;
+}
+
+/* Form */
+.form-group {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 500;
+  color: #000;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #866237;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+  color: #000;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #866237;
+}
+
+/* Buttons */
+button {
+  margin-top: 22px;
+  padding: 12px 18px;
+  border: 2px solid #866237;
+  border-radius: 6px;
+  background-color: #866237;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* Result */
+.result-card {
+  border-left: 5px solid #866237;
+}
+
+.event-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #fdfbd4;
+  border: 1px solid #866237;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+.event-title span {
+  color: #000;
+}
+
+.timestamp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.timestamp-item {
+  padding: 18px;
+  background-color: #866237;
+  border-radius: 6px;
+  color: white;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 14px;
+}
+
+code {
+  font-family: monospace;
+  word-break: break-word;
+  color: white;
+}
+
+/* Section heading */
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.section-heading .secondary-button {
+  margin-top: 0;
+}
+
+/* Event history */
+.event-item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr auto;
+  gap: 20px;
+  align-items: center;
+  padding: 18px 0;
+  border-top: 1px solid #866237;
+}
+
+.event-information h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+  color: #866237;
+}
+
+.event-information p {
+  margin: 0;
+  color: #000;
+  font-size: 14px;
+}
+
+.event-timestamps {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+}
+
+.event-timestamps code {
+  font-size: 12px;
+  color: #866237;
+}
+
+/* Delete button */
+.delete-button {
+  margin-top: 0;
+  background-color: white;
+  color: #866237;
+  border: 1px solid #866237;
+}
+
+.delete-button:hover {
+  background-color: #866237;
+  color: white;
+}
+
+/* Empty message */
+.empty-message {
+  padding: 20px;
+  text-align: center;
+  color: #866237;
+  background-color: #fdfbd4;
+  border: 1px solid #866237;
+  border-radius: 6px;
+}
+
+/* API information */
+.api-card {
+  background-color: #866237;
+  color: black;
+  border: none;
+}
+
+.api-card h2,
+.api-card .description {
+  color: white;
+}
+
+.api-example {
+  margin-top: 15px;
+  padding: 13px;
+  background-color: white;
+  border-radius: 6px;
+}
+
+.api-example code {
+  display: block;
+  margin-top: 7px;
+  font-size: 13px;
+  word-break: break-all;
+  color: #000;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  .header h1 {
+    font-size: 27px;
+  }
+  .card {
+    padding: 20px;
+  }
+  .timestamp {
+    grid-template-columns: 1fr;
+  }
+  .section-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .event-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .delete-button {
+    width: 100%;
+  }
+}
